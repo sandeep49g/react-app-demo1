@@ -13,5 +13,39 @@ code {
 }
 
 .app-main {
-  display:flex;
+  
 }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background: #ccc;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 40%;
+}
+
+/* Nerdy secret: You can use "less" below! Don't tell anybody... */
+
+.user-profile {
+  margin: 1rem;
+}
+img {
+  width: 75px;
+}
+.user-profile .info {
+  display: inline-block;
+  margin-left: 12px;		
+}
+.user-profile .info .name {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
