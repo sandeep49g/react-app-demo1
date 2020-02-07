@@ -1,0 +1,88 @@
+Ref URL:  https://www.tutorialspoint.com/reactjs/reactjs_environment_setup.htm
+
+cd react-app-demo >
+
+1. npm init
+
+2.
+npm install react --save
+npm install react-dom --save
+
+OR
+
+npm install react react-dom --save
+
+3.
+npm install webpack --save
+npm install webpack-dev-server --save
+npm install webpack-cli --save
+
+OR
+
+npm install webpack webpack-dev-server webpack-cli --save
+
+
+4.
+npm install babel-core --save-dev
+npm install babel-loader --save-dev
+npm install babel-preset-env --save-dev
+npm install babel-preset-react --save-dev
+npm install html-webpack-plugin --save-dev
+
+OR
+
+npm install babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin --save-dev
+
+
+5. Open webpack.config.js
+
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+   entry: './main.js',
+   output: {
+      path: path.join(__dirname, '/bundle'),
+      filename: 'index_bundle.js'
+   },
+   devServer: {
+      inline: true,
+      port: 8001
+   },
+   module: {
+      rules: [
+         {
+            test: /\.jsx?$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+               presets: ['es2015', 'react']
+            }
+         }
+      ]
+   },
+   plugins:[
+      new HtmlWebpackPlugin({
+         template: './index.html'
+      })
+   ]
+}
+
+
+6. Open the package.json and delete "test" "echo \"Error: no test specified\" && exit 1" inside "scripts" object. We are deleting this line since we will not do any testing in this tutorial. Let's add the start and build commands instead.
+
+"start": "webpack-dev-server --mode development --open --hot",
+"build": "webpack --mode production"
+
+7. index.html
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+      <meta charset = "UTF-8">
+      <title>React App</title>
+   </head>
+   <body>
+      <div id = "app"></div>
+      <script src = 'index_bundle.js'></script>
+   </body>
+</html>

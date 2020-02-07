@@ -1,0 +1,22 @@
+cd react-app-demo >
+
+1. If you dont wish to install (create-react-app), then use below command:
+
+npx create-react-app {appName}
+npx create-react-app .    (If in same folder)
+
+OR
+
+1. (If you want to install create-react-app in system, then use below command)
+
+npm install create-react-app  
+
+create-react-app {appName}
+create-react-app .    (If in same folder)
+
+
+2. npm start (To run)
+
+3. npm run build  (To build for production)
+
+4. npm install react-router-dom --save
