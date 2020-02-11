@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import UserDetails from './UserDetails.js';
+import UserInfo from './UserInfo.js';
 
 export default function Users() {
     
@@ -21,7 +21,7 @@ export default function Users() {
             <div>
                 {
                     users.map(user => (
-                        <UserDetails {...user} />
+                        <UserInfo key={user.id} {...user} />
                     ))
                 }
             </div>

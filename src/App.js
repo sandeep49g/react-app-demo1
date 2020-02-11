@@ -4,6 +4,7 @@ import Nav from './router-demo/Nav.js'
 import Home from './router-demo/Home.js';
 import About from './router-demo/About.js';
 import Users from './router-demo/Users.js';
+import UserDetails from './router-demo/UserDetails.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path='/home' component={Home} />
           <Route path='/about' component={About} />
           <Route path='/users' exact component={Users} />
+          <Route path='/users/:userId' component={UserDetails} />
         </Switch>
       </div>
     </Router>

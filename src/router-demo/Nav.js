@@ -6,13 +6,13 @@ export default function Nav() {
     return (
         <nav>
             <ul className='nav-links'>
-                <Link to ='/home'>
+                <Link to='/home'>
                     <li>Home</li>
                 </Link>
-                <Link to ='/about'>
+                <Link to='/about'>
                     <li>About</li>
                 </Link>
-                <Link to ='/users'>
+                <Link to='/users'>
                     <li>Users</li>
                 </Link>
             </ul>
