@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useLocation} from 'react-router-dom';
+import {helperService} from './helpers';
 
 export default function UserDetails() {
     const [userDetails, updateUserDetails] = useState({});
     let {userId} = useParams();
-    
+    let {search} = useLocation();
+    let queryParams = helperService.getQueryParams(search);
+
     useEffect(() => {
         fetchUserDetails();
     }, []);
@@ -20,7 +23,7 @@ export default function UserDetails() {
             <img src={userDetails.avatar_url} />
             <div className="info">
                 <div className="name">{userDetails.login}</div>
-                <div className="company">{userDetails.url}</div>
+                <div className="profile-id">{queryParams.profileId}</div>
             </div>
         </div>
     )

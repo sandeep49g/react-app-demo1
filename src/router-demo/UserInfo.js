@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 export default function UserInfo(userProfile) {
     return (
-        <Link to={`/users/${userProfile.login}`}>
+        <Link to={`/users/${userProfile.login}?profileId=${userProfile.id}`}>
             <div className='user-profile'>
                 <img src={userProfile.avatar_url} />
                 <div className="info">
