@@ -45,3 +45,11 @@ img {
   font-weight: bold;
 }
 
+
+.user-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+}
+

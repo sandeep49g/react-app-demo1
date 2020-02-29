@@ -5,6 +5,7 @@ import Home from './router-demo/Home.js';
 import About from './router-demo/About.js';
 import Users from './router-demo/Users.js';
 import UserDetails from './router-demo/UserDetails.js';
+import UserProfile from './router-demo/UserProfile.js';
 
 function App() {
   return (
@@ -12,11 +13,16 @@ function App() {
       <div className='app-main'>
         <Nav />
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/home' component={Home} />
-          <Route path='/about' component={About} />
+          <Route path='/' exact children={Home} />
+          <Route path='/home' children={Home} />
+          <Route path='/about'>
+            <About />
+          </Route>
           <Route path='/users' exact component={Users} />
-          <Route path='/users/:userId' component={UserDetails} />
+          <Route path='/users/:userId' exact component={UserDetails} />
+          {/* <Route path='/users/:userId/:profileId/:userName' exact>
+              <UserProfile />
+          </Route> */}
         </Switch>
       </div>
     </Router>
