@@ -5,7 +5,8 @@ import Home from './router-demo/Home.js';
 import About from './router-demo/About.js';
 import Users from './router-demo/Users.js';
 import UserDetails from './router-demo/UserDetails.js';
-import UserProfile from './router-demo/UserProfile.js';
+//import UserProfile from './router-demo/UserProfile.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
