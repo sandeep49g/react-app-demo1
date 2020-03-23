@@ -15,9 +15,10 @@
   border-top: 3px solid transparent;
   line-height: 17px;
   color: #79858f;
+  cursor: pointer;
 }
 
-.tab-item:hover {
+.tab-item:hover:not(.tab-item-active) {
     border-top-color: #c2c9ce;
 }
 

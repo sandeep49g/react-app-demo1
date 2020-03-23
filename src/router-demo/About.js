@@ -8,13 +8,13 @@ export default function About() {
             <h1>About Page</h1>
             <div>
                 <Tabs>
-                <div label="Gator">
+                <div tabKey="Gator">
                     See ya later, <em>Alligator</em>!
                 </div>
-                <div label="Croc">
+                <div tabKey="Croc" active>
                     After &apos;while, <em>Crocodile</em>!
                 </div>
-                <div label="Sarcosuchus">
+                <div tabKey="Sarcosuchus">
                     Nothing to see here, this tab is <em>extinct</em>!
                 </div>
                 </Tabs>
