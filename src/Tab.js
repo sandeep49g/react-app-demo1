@@ -12,4 +12,4 @@ export default (props) => {
             {props.tabKey}
         </li>
     );
-}
+};

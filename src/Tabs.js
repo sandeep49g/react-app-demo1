@@ -10,16 +10,16 @@ export default (props) => {
             tabItems.push(props.children);
         }
         const defaultActiveTab = tabItems[0].props.tabKey;
-        let [activeTab, setActiveTab] = useState(defaultActiveTab);
-        const getActiveTab = (tabItems) => {
+        const [activeTab, setActiveTab] = useState(defaultActiveTab);
+        const getActiveTab = () => {
             tabItems.forEach((tabItem) => {
                 if (tabItem.props.active) {
                     setActiveTab(tabItem.props.tabKey);
                 }
             });
-        }
+        };
         useEffect(() => {
-            getActiveTab(tabItems);
+            getActiveTab();
         }, [tabItems]);
 
         return (
@@ -38,7 +38,9 @@ export default (props) => {
                 </ul>
                 <div className="tab-content">
                     {tabItems.map((child) => {
-                        if (child.props.tabKey !== activeTab) return undefined;
+                        if (child.props.tabKey !== activeTab) {
+                            return undefined;
+                        }
                         return child.props.children;
                     })}
                 </div>
@@ -46,4 +48,4 @@ export default (props) => {
         );
     }
     return <div class='xyz'></div>;
-}
+};
