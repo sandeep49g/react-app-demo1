@@ -1,0 +1,32 @@
+.tab-list {
+  padding: 0 0px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c2c9ce;
+  background-color: #edf0f1;
+  cursor: pointer;
+}
+
+.tab-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 8px 11px;
+  border-right: 1px solid #c2c9ce; 
+  border-top: 3px solid transparent;
+  line-height: 17px;
+  color: #79858f;
+}
+
+.tab-item:hover {
+    border-top-color: #c2c9ce;
+}
+
+.tab-item-active {
+  background-color: #fff;
+  border-top-color: #7399c6;
+  color: #29323a;
+}
+
+.tab-content {
+    margin-left: 10px;
+}
