@@ -47,5 +47,5 @@ export default (props) => {
             </div>
         );
     }
-    return <div class='xyz'></div>;
+    return <div></div>;
 };

@@ -11,7 +11,7 @@ export default function About() {
                 <div tabKey="Gator fdd">
                     See ya later, <em>Alligator</em>!
                 </div>
-                <div tabKey="Croc, sdd">
+                <div tabKey="Croc, sdd" active>
                     After &apos;while, <em>Crocodile</em>!
                 </div>
                 <div tabKey="Sarcosuchus, dd">
